@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="style.xsl"?>
+<prosit>
+    
+    <!-- Best prosit aller ever by Pingui, watch my swag -->
+
+    <keywords>
+        <word define="true">OPA</word>
+        <word>Access</word>
+        <word define="true">ERP</word>
+        <word>MySQL</word>
+        <word>Oracle</word>
+        <word>SGBD</word>
+        <word>DOM</word>
+        <word define="true">SAX</word>
+        <word>Schéma BDD</word>
+    </keywords>
+    
+    <context>
+        Le responsable de Renault veut fusionner sa BDD avec celle de AICAD sous ☠Access☠.
+    </context>
+    
+    <needs>
+        <need>Utiliser BDD ☠Access☠</need>
+        <need>Passer de ☠Access☠ à MySQL</need>
+        <need>Mise en forme de la BDD en XML</need>
+    </needs>
+    
+    <general>Il faut faire transiter les informations d'un SGBD à un autre en XML.</general>
+    
+    <hypothesis>
+        <idea>XML seul ne suffit pas à échanger des informations d'un SGBD à un autre.</idea>
+        <idea>On peut mettre un fichier .mdb en forme avec XSLT.</idea>
+        <idea>SAX permet de gérer les évenements sur des objets XML.</idea>
+        <idea>SAX remplace le DOM.</idea>
+        <idea>XML peut modéliser des schémas de BDD.</idea>
+        <idea>MySQL peut directement exporter en XML.</idea>
+        <idea>Access peut directement exporter en XML.</idea>
+        <idea>XSLT permet de parser de MDB vers MySQL.</idea>
+    </hypothesis>
+
+    <plan>
+        <chapter name="Comment gérer une BDD avec XML">
+            <part>Export</part>
+            <part>Import</part>
+        </chapter>
+        
+        <chapter name="SAX" />
+        
+        <chapter name="Modélisation d'un schéma de BDD" />
+        
+        <chapter name="Réalisation">
+            <part>Récupérer les données</part>
+            <part>Créer les vues XML</part>
+        </chapter>
+    </plan>
+    
+</prosit>
