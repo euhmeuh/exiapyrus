@@ -1,7 +1,9 @@
-/*-- CONTAINERS --*/
+/*-------------+
++  CONTAINERS  +
++-------------*/
 body {
 	font-family: sans;
-	background: #EEEEEE;
+	background: #EEE;
 	color: #333333;
 }
 
@@ -11,17 +13,44 @@ body {
 	margin: 0px auto;
 }
 
+/*---------+
++  HEADER  +
++---------*/
+
 header {
+	position: relative;
+
 	padding: 50px;
 	margin-bottom: 75px;
 	text-align: center;
-	border: 1px dashed #333;
+
+	border-radius: 3px;
+	box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
+
+	background: -webkit-linear-gradient(to bottom , #FFF, #EEE);
+	background-image: linear-gradient(to bottom , #FFF, #EEE);
+}
+
+header::before {
+	content: ' ';
+	position: absolute;
+
+
+	top: 5px;
+	left: 5px;
+	bottom: 5px;
+	right: 5px;
+
+	box-shadow: 0 0 0 1px #FFF;
+	border: 1px dashed #CCC;
 	border-radius: 3px;
 }
 
-/*-- SECTIONS --*/
+/*-----------+
++  SECTIONS  +
++-----------*/
 section {
-	border-bottom: 1px dashed #333;
+	border-bottom: 1px dashed #444;
 	padding-bottom: 50px;
 	margin-bottom: 50px;
 }
@@ -32,7 +61,9 @@ section:last-child {
 	margin-bottom: 0;
 }
 
-/*-- HEADINGS --*/
+/*-----------+
++  HEADINGS  +
++-----------*/
 h1 {
 	color: #000000;
 	margin: 0px 0px 20px 0px;
@@ -42,24 +73,28 @@ h2 {
 	color: #222222;
 }
 
-/*-- I'M SPECIAL --*/
+/*--------------+
++  I'M SPECIAL  +
++--------------*/
 time {
 	color: #808080;
 }
 
+/*-- subtitles --*/
 .sub {
+	display: inline-block;
 	color: #808080;
 }
 
-.sub::after {
+.sub:after {
 	content: ' - ';
 }
 
-/* This is buggy :c */
-.sub:last-child::after {
-	display: none;
+.sub:last-child:after {
+	content: '';
 }
 
+/*-- definitions --*/
 .define {
 	color: red;
 	font-weight: bold;
